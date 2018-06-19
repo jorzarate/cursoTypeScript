@@ -1,3 +1,32 @@
+module Tienda{
+
+    export class Ropa {
+        constructor(public titulo:string) {
+            alert(titulo);
+        }
+    }
+
+    export class Informatica {
+        constructor(public titulo:string) {
+            alert("Tienda de Tecnologia: "+titulo);
+        }
+    }
+}
+
+import Informatica = Tienda.Informatica;
+let cargar_informactica = new Informatica('supertienda');
+
+/*
+function arranque(lanzar: string){
+    return function(target: Function){
+        target.prototype.lanzamiento = function(): void{
+            alert(lanzar);
+        }
+    }
+
+}
+
+@arranque("Curso de Nodejs y Angular 2")*/
 class Programa{
 
     public nombre:string;
@@ -70,4 +99,22 @@ function guardar(){
 
     (<HTMLInputElement>document.getElementById("nombre")).value = "";
 }
+
+setInterval(() => {
+    console.log("Hola");
+
+},1000);
+
+var frutas = [
+'Manzana',
+'Banana',
+'Naranja'
+];
+
+var recorrer = frutas.map(fruta=>{
+    console.log(fruta);
+    console.log(fruta.length);
+});
+
+
 

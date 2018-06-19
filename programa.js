@@ -8,6 +8,38 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var Tienda;
+(function (Tienda) {
+    var Ropa = /** @class */ (function () {
+        function Ropa(titulo) {
+            this.titulo = titulo;
+            alert(titulo);
+        }
+        return Ropa;
+    }());
+    Tienda.Ropa = Ropa;
+    var Informatica = /** @class */ (function () {
+        function Informatica(titulo) {
+            this.titulo = titulo;
+            alert("Tienda de Tecnologia: " + titulo);
+        }
+        return Informatica;
+    }());
+    Tienda.Informatica = Informatica;
+})(Tienda || (Tienda = {}));
+var Informatica = Tienda.Informatica;
+var cargar_informactica = new Informatica('supertienda');
+/*
+function arranque(lanzar: string){
+    return function(target: Function){
+        target.prototype.lanzamiento = function(): void{
+            alert(lanzar);
+        }
+    }
+
+}
+
+@arranque("Curso de Nodejs y Angular 2")*/
 var Programa = /** @class */ (function () {
     function Programa() {
     }
@@ -62,3 +94,15 @@ function guardar() {
     listado.innerHTML = list;
     document.getElementById("nombre").value = "";
 }
+setInterval(function () {
+    console.log("Hola");
+}, 1000);
+var frutas = [
+    'Manzana',
+    'Banana',
+    'Naranja'
+];
+var recorrer = frutas.map(function (fruta) {
+    console.log(fruta);
+    console.log(fruta.length);
+});
